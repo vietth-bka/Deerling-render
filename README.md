@@ -1,10 +1,4 @@
-# lightwave
-
-Welcome to _lightwave_, an educational framework for writing ray tracers that can render photo-realistic images!
-Lightwave provides the boring boilerplate, so you can focus on writing the insightful parts.
-It aims to be minimal enough to remain comprehensible, yet flexible enough to provide a solid foundation even for sophisticated rendering algorithms.
-
-## Our result
+## Deerling's render
 This repo is a ray tracing engine developed on top of the **Lightwave** framework as the final project for 
 the [Computer Graphics course at Saarland University](https://graphics.cg.uni-saarland.de/) 
 lectured by [Prof. Dr.-Ing. Philipp Slusallek](https://graphics.cg.uni-saarland.de/people/slusallek.html) during the Winter Semester 2024/2025. 
@@ -51,6 +45,12 @@ We hit the second place in the rendering competition of the course. Our rendered
 - [x] Samplers
   - [x] Halton
   - [x] Independent
+
+# lightwave
+
+Welcome to _lightwave_, an educational framework for writing ray tracers that can render photo-realistic images!
+Lightwave provides the boring boilerplate, so you can focus on writing the insightful parts.
+It aims to be minimal enough to remain comprehensible, yet flexible enough to provide a solid foundation even for sophisticated rendering algorithms.
 
 <!-- ## Assignments
 We want you to make this renderer truly your own. Our assignments provide ample opportunities to customize your renderer with features that you personally find interesting, and you are welcome to change each and every line of your renderer as you see fit, including all of its interfaces. The only **hard requirement** is that your renderer remains capable of reading our test scene files, and outputs the right images for those.

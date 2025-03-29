@@ -24,8 +24,8 @@ We hit the second place in the rendering competition of the course. Our rendered
     - [x] Rough Conductor
     - [x] Dielectric
     - [x] Principled
-    - [x] Rough dielectric
-    - [x] Principled volume
+    - [x] Rough Dielectric
+    - [x] Principled Volume
   - [x] Lambertian Emission
 - [x] Lights:
   - [x] Environment Map

@@ -1,0 +1,85 @@
+
+<integrator type="pathtracer" depth="100">
+    <scene id="scene">
+        <camera type="perspective" id="camera">
+            <integer name="width" value="400"/>
+            <integer name="height" value="400"/>
+
+            <string name="fovAxis" value="x"/>
+            <float name="fov" value="40"/>
+
+            <transform>
+                <translate z="-5"/>
+            </transform>
+        </camera>
+
+        <light type="point" position="-5,-10,0" power="200" />
+        <light type="point" position="-5.1,-10.1,0" power="200" />
+        <light type="point" position="-4.9,-9.9,0" power="200" />
+        <light type="point" position="-4.9,-10,0" power="200" />
+        <light type="point" position="-5,-9.9,0" power="200" />
+
+        <!-- <instance>
+            <shape type="rectangle"/>
+            <bsdf type="diffuse">
+                <texture name="albedo" type="constant" value="1"/>
+            </bsdf>
+            <transform>
+                <rotate axis="1,0,0" angle="90"/>
+                <scale value="1"/>
+                <translate x="-4" y="-4.8" z="0"/>
+            </transform>
+        </instance> -->
+
+        <instance>
+            <shape type="rectangle"/>
+            <bsdf type="diffuse">
+                <texture name="albedo" type="constant" value="1"/>
+            </bsdf>
+            <transform>
+                <rotate axis="1,0,0" angle="90"/>
+                <scale value="10"/>
+                <translate y="1"/>
+            </transform>
+        </instance>
+
+        <instance>
+            <shape type="sphere"/>
+            <bsdf type="diffuse">
+                <texture name="albedo" type="constant" value="1"/>
+            </bsdf>
+            <transform>
+                <scale value="0.5"/>
+                <translate y="-0.8" z="0" x="-0.8"/>
+            </transform>
+        </instance>
+
+        <!-- <instance>
+            <shape type="sphere"/>
+            <medium type="homogeneous" sigmaT="0.5" color="1,0.55,0.8"/>
+            <transform>
+                <scale value="1"/>
+                <translate y="0" z="0" x="-0.2"/>
+            </transform>
+        </instance> -->
+
+        <instance>
+            <!-- <shape type="mesh" filename="../../meshes/cube.ply" smooth="false"/> -->
+            <shape type="sphere"/>
+            <volume type="constant" value="0.3" />
+            <bsdf type="volume" absorption="3" phase="0.0" color="1,0.55,0.8"/>
+            <!-- <transform>
+                <scale value="2"/>
+                <translate y="-0.8" z="0" x="-0.8"/>
+            </transform> -->
+            <transform>
+                <scale value="1"/>
+                <translate y="0" z="0" x="-0.2"/>
+            </transform>
+        </instance>
+
+    </scene>
+    <image id="volumetric-shadow(1)"/> 
+    <sampler type="independent" count="256"/>
+</integrator>
+

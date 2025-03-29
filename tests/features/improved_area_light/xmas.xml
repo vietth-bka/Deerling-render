@@ -1,0 +1,357 @@
+<scene id="scene">
+	<camera type="perspective">
+		<integer name="width" value="1920"/>
+		<integer name="height" value="1080"/>
+		<float name="fov" value="23.798"/>
+		<string name="fovAxis" value="x"/>
+		<transform>
+		<matrix value="0.69704,0.24924,-0.67232,7.3589,  0.71495,-0.31307,0.62517,-6.9258,  -0.054666,-0.91644,-0.39641,4.9583,  0,0,0,1"/>
+		</transform>
+	</camera>
+
+  
+  <instance>
+    <shape type="mesh" filename="../meshes/Vert.002.ply"/>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.11638,0.024971,0.0077543"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.93846,-0.34386,-0.032367,0.014256,  0.34538,0.93433,0.087945,-0.038737,  2.0808e-17,-0.093712,0.9956,0.0045882,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <shape type="mesh" filename="../meshes/Cube.004.ply"/>
+    <bsdf id="White_001" type="principled">
+      <texture name="baseColor" type="constant" value="0.8,0.8,0.8"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.93846,-0.34538,0,0,  0.34538,0.93846,0,0,  0,0,1,0,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <shape type="mesh" filename="../meshes/Plane.002.ply"/>
+    <bsdf id="Red_001" type="principled">
+      <texture name="baseColor" type="constant" value="0.51735,0,0.002257"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.78804,-0.36566,0.49525,0.24421,  0.61495,0.50508,-0.60559,-0.27256,  -0.028702,0.78178,0.62289,0.77702,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <shape type="mesh" filename="../meshes/Cylinder.002.ply"/>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.8"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.43323,-0.61908,-0.65503,-0.72753,  0.43389,0.78026,-0.45048,-0.33794,  0.78997,-0.08905,0.60664,0.96498,  0,0,0,1"/>
+    </transform>
+  </instance>
+  
+  <instance>
+    <ref id="Red_001"/>
+    <shape type="mesh" filename="../meshes/Cube.009.ply"/>
+    <transform>
+      <matrix value="0.38214,-0.65604,-0.65082,-0.80327,  0.42997,0.74963,-0.50318,-0.39741,  0.81798,-0.087545,0.56854,1.0444,  0,0,0,1"/>
+    </transform>
+  </instance>
+  
+  <instance>
+    <shape type="mesh" filename="../meshes/Cube.010.ply"/>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.80076,0.25329,0.0083326"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.93846,-0.34386,-0.032367,0.09661,  0.34538,0.93433,0.087945,-0.2625,  2.0808e-17,-0.093712,0.9956,1.2231,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <shape type="mesh" filename="../meshes/Cube.011.ply"/>
+    <bsdf id="Black_001" type="principled">
+      <texture name="baseColor" type="constant" value="0,0,0"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0"/>
+    </bsdf>
+    <transform>
+      <matrix value="0.93846,-0.34386,-0.032367,-0.035292,  0.34538,0.93433,0.087945,-0.2535,  2.0808e-17,-0.093712,0.9956,1.2971,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <ref id="White_001"/>
+    <shape type="mesh" filename="../meshes/Cube.013.ply"/>
+    <transform>
+      <matrix value="0.93846,-0.34386,-0.032367,-0.02366,  0.34538,0.93433,0.087945,0.064288,  2.0808e-17,-0.093712,0.9956,1.1709,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <ref id="Black_001"/>
+    <shape type="mesh" filename="../meshes/Cube.012.ply"/>
+    <transform>
+      <matrix value="0.93846,-0.32558,-0.11529,0.16504,  0.34538,0.88464,0.31325,-0.44844,  1.7548e-16,-0.3338,0.94265,0.5638,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <ref id="Red_001"/>
+    <shape type="mesh" filename="../meshes/Circle.001_Piece.001.ply"/>
+    <transform>
+      <matrix value="0.9348,-0.33523,0.11737,0.0079086,  0.28976,0.91088,0.29383,0.13195,  -0.20542,-0.24066,0.94862,1.4206,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <ref id="Black_001"/>
+    <shape type="mesh" filename="../meshes/Circle.002.ply"/>
+    <transform>
+      <matrix value="0.9348,-0.33523,0.11737,0.0079086,  0.28976,0.91088,0.29383,0.13195,  -0.20542,-0.24066,0.94862,1.4206,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+  <instance>
+    <ref id="Red_001"/>
+    <shape type="mesh" filename="../meshes/Circle.003.ply"/>
+    <transform>
+      <matrix value="0.93846,-0.34386,-0.032367,-0.010756,  0.34538,0.93433,0.087945,0.029227,  2.0808e-17,-0.093712,0.9956,0.77398,  0,0,0,1"/>
+    </transform>
+  </instance>
+
+
+  	<instance>
+		<shape type="rectangle" />
+		<bsdf type="diffuse">
+			<texture name="albedo" type="checkerboard" scale="32" color0="0.1" color1="0.9" />
+		</bsdf>
+		<transform>
+			<rotate axis="1,0,0" angle="0" />
+			<scale value="10" />
+			<translate y="1" />
+		</transform>
+	</instance>
+
+	<light type="envmap">
+		<!-- "0.050876,0.050876,0.050876" -->
+		<texture type="constant" value="0.1, 0.1, 0.1"/> 
+		<transform>
+		<matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+		</transform>
+	</light>
+
+	<!-- <light type="area">
+		<instance>
+		<shape type="rectangle"/>
+		<transform>
+			<matrix value="0.016768,-0.028422,-0.75127,6.9678,  0.045668,3.5251e-05,0.40717,-1.798,  0.011546,0.041136,-0.51943,5.2725,  0,0,0,1"/>
+		</transform>
+		<emission type="lambertian">
+			<texture name="emission" type="constant" value="25000,25000,25000"/>
+		</emission>
+		</instance>
+	</light> -->
+
+	<!-- 0.2,0.7,3 -->
+	<!-- <scale value="0.5" /> -->
+	<light type="area">
+		<instance>
+			<shape type="sphere" />
+			<emission type="lambertian">
+				<texture name="emission" type="constant" value="2,7,30" /> 
+			</emission>
+			<transform>			
+				<scale value="1.5" />
+				<translate x="-2.5" y="-2" z="3" />
+			</transform>
+		</instance>
+	</light>
+
+	<!-- 2,0.5,0.1 -->
+	<light type="area">
+		<instance>
+			<shape type="sphere" />
+			<emission type="lambertian">
+				<texture name="emission" type="constant" value="20,5,1" /> 
+			</emission>
+			<transform>
+				<scale value="1" />
+				<translate x="2.5" y="2" z="3" />
+			</transform>
+		</instance>
+	</light>
+
+		<instance>
+			<bsdf id="gold_003" type="principled">
+			<texture name="baseColor" type="constant" value="0.92949,0.40778,0.076161"/>
+			<texture name="roughness" type="constant" value="0.2"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_0_球体.003.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.97327,  0.056427,0.14064,0,0.062152,  0,0,0.15154,1.3689,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="1,0.065131,0.70118"/>
+			<texture name="roughness" type="constant" value="0.5"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_1_球体.003.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.97327,  0.056427,0.14064,0,0.062152,  0,0,0.15154,1.3689,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_0_球体.006.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,2.1222,  0.056427,0.14064,0,-0.82535,  0,0,0.15154,1.0127,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="0.59954,0.0021043,0"/>
+			<texture name="roughness" type="constant" value="0.3"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<texture name="normal" type="constant" value="0"/>
+			<shape type="mesh" filename="../meshes/_m_1_球体.006.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,2.1222,  0.056427,0.14064,0,-0.82535,  0,0,0.15154,1.0127,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_0_球体.007.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.85244,  0.056427,0.14064,0,-2.4418,  0,0,0.15154,1.2829,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="0.032437,0.50783,0.012315"/>
+			<texture name="roughness" type="constant" value="0.3"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_1_球体.007.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.85244,  0.056427,0.14064,0,-2.4418,  0,0,0.15154,1.2829,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_0_球体.009.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,-0.83351,  0.056427,0.14064,0,-0.77763,  0,0,0.15154,1.7705,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf id="Material_007" type="principled">
+			<texture name="baseColor" type="constant" value="0.33504,0.33504,0.33504"/>
+			<texture name="roughness" type="constant" value="0.25"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_1_球体.009.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,-0.83351,  0.056427,0.14064,0,-0.77763,  0,0,0.15154,1.7705,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_0_球体.010.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.8118,  0.056427,0.14064,0,-2.3381,  0,0,0.15154,2.2283,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="0.018055,0.055851,0.98565"/>
+			<texture name="roughness" type="constant" value="0.2"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_1_球体.010.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,0.8118,  0.056427,0.14064,0,-2.3381,  0,0,0.15154,2.2283,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_0_球体.011.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,2.4619,  0.056427,0.14064,0,-0.32906,  0,0,0.15154,2.2515,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="0.97143,0.39761,0.056823"/>
+			<texture name="roughness" type="constant" value="0.2"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<shape type="mesh" filename="../meshes/_m_1_球体.011.ply"/>
+			<transform>
+			<matrix value="0.14064,-0.056427,0,2.4619,  0.056427,0.14064,0,-0.32906,  0,0,0.15154,2.2515,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<bsdf type="principled">
+			<texture name="baseColor" type="constant" value="0.98565,0.40324,0.057546"/>
+			<texture name="roughness" type="constant" value="0.3"/>
+			<texture name="metallic" type="constant" value="1"/>
+			<texture name="specular" type="constant" value="0"/>
+			</bsdf>
+			<texture name="normal" type="constant" value="0"/>
+			<shape type="mesh" filename="../meshes/_m_0_柱体.001.ply"/>
+			<transform>
+			<matrix value="0.2188,-0.087784,0,0.17658,  0.087784,0.2188,0,-1.0715,  0,0,0.23575,1.7557,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_1_柱体.001.ply"/>
+			<transform>
+			<matrix value="0.2188,-0.087784,0,0.17658,  0.087784,0.2188,0,-1.0715,  0,0,0.23575,1.7557,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="Material_007"/>
+			<shape type="mesh" filename="../meshes/_m_0_柱体.002.ply"/>
+			<transform>
+			<matrix value="0.2188,-0.087784,0,1.3722,  0.087784,0.2188,0,-0.040306,  0,0,0.23575,1.9284,  0,0,0,1"/>
+			</transform>
+		</instance>
+		<instance>
+			<ref id="gold_003"/>
+			<shape type="mesh" filename="../meshes/_m_1_柱体.002.ply"/>
+			<transform>
+			<matrix value="0.2188,-0.087784,0,1.3722,  0.087784,0.2188,0,-0.040306,  0,0,0.23575,1.9284,  0,0,0,1"/>
+			</transform>
+		</instance>
+
+
+</scene>
+<!-- <integrator type="pathtracer" depth="3"> -->
+<integrator type="direct">
+  <ref id="scene"/>
+  <image id="xmas_pathtracer"/>
+  <sampler type="independent" count="128"/>
+</integrator>

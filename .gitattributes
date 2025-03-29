@@ -1,0 +1,2 @@
+tests/features/scene/room/export_xml/textures.zip filter=lfs diff=lfs merge=lfs -text
+/Users/tranhongviet/Workspace/Computer_Graphics/deerling-main/tests/features/scene/room/export_xml/textures.zip filter=lfs diff=lfs merge=lfs -text

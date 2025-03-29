@@ -1,0 +1,23 @@
+<test type="image" id="constant_direct">
+    <integrator type="direct">
+        <scene id="scene">
+            <camera type="perspective" id="camera">
+                <integer name="width" value="400"/>
+                <integer name="height" value="300"/>
+
+                <string name="fovAxis" value="x"/>
+                <float name="fov" value="25"/>
+
+                <transform>
+                    <lookat origin="0,-1,-4" target="0,0.54,0" up="0,1,0"/>
+                </transform>
+            </camera>
+
+            <light type="envmap" weight="0">
+                <texture type="constant" value="0.015,0.09,0.3"/>
+            </light>
+
+        </scene>
+        <sampler type="independent" count="128"/>
+    </integrator>
+</test>

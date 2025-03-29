@@ -1,0 +1,13 @@
+__pycache__
+
+/build*
+/.vscode
+
+/.vs
+/out
+/scenes
+
+/docs/html
+/docs/latex
+
+.DS_Store

@@ -1,0 +1,53 @@
+<test type="image" id="principled_sphere">
+	<integrator type="direct">
+		<scene id="scene">
+			<camera type="perspective" id="camera">
+				<integer name="width" value="400"/>
+				<integer name="height" value="400"/>
+				<float name="fov" value="43.127"/>
+				<string name="fovAxis" value="x"/>
+				<!-- <transform>
+					<matrix value="0.68592,0.32401,-0.65156,8.4521,  0.72768,-0.30542,0.61417,-8.1586,  -4.0113e-09,-0.8954,-0.44527,4.1251,  0,0,0,1"/>
+				</transform> -->
+				<transform>
+				<lookat origin="0,-4,-4" target="0,0,0" up="0,1,0"/>
+				</transform>
+			</camera>
+
+		<light type="directional" direction="-3,-3,-3" intensity="0.3,0.3,0.3"/>
+		<light type="directional" direction="3,-3,-3" intensity="2,2,2"/>
+
+		<instance>
+			<shape type="sphere"/>
+			<bsdf type="principled">
+				<texture name="baseColor" type="constant" value="0.92949,0.5,0.92949"/>
+				<texture name="roughness" type="constant" value="0.5"/>
+				<texture name="metallic" type="constant" value="1.0"/>
+				<texture name="specular" type="constant" value="0.5"/>
+			</bsdf>
+    	</instance>
+
+		<instance>
+			<shape type="rectangle"/>
+			<bsdf type="diffuse">
+				<texture name="albedo" type="checkerboard" scale="16" color0="0.3" color1="0.8"/>
+			</bsdf>
+			<transform>
+				<scale value="10"/>
+				<rotate axis="1,0,0" angle="90"/>
+				<translate y="1"/>
+			</transform>
+		</instance>
+
+		<light type="envmap">
+		<texture type="constant" value="0.050876,0.050876,0.050876"/>
+		<transform>
+			<matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+		</transform>
+		</light>
+
+		</scene>
+		<sampler type="independent" count="64"/>
+	</integrator>
+</test>
+

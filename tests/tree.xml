@@ -1,0 +1,74 @@
+<test type="image" id="shading_normal2">
+  <integrator type="pathtracer" depth="10">
+    <sampler type="independent" count="64"/>
+    <scene id="scene">
+      <camera type="perspective">
+        <integer name="width" value="1920"/>
+        <integer name="height" value="1080"/>
+        <float name="fov" value="39.598"/>
+        <string name="fovAxis" value="x"/>
+        <transform>
+          <matrix value="0.68592,0.32401,-0.65156,7.3589,  0.72768,-0.30542,0.61417,-6.9258,  -4.0113e-09,-0.8954,-0.44527,4.9583,  0,0,0,1"/>
+        </transform>
+      </camera>
+
+        <!-- <instance>
+            <shape type="sphere"/>
+            <transform>
+            <scale value="0.1"/>
+            <translate x="0.80948" y="-3.5543" z="4.3947"/>
+            </transform>
+            <emission type="lambertian">
+            <texture name="emission" type="constant" value="5066.1,5066.1,5066.1"/>
+            </emission>
+        </instance> -->
+        <light type="point" position="4, -2, 2.3" power="5066,5066,5066" />
+
+        <instance>
+            <shape type="mesh" filename="meshes/_m_0_Mesh.002.ply"/>
+            <bsdf type="principled">
+            <texture name="baseColor" type="image" filename="textures/MT_PM_V60_Acer_buergerianum_01_Trunk_01_albedo.jpg"/>
+            <texture name="roughness" type="constant" value="0"/>
+            <texture name="metallic" type="constant" value="0"/>
+            <texture name="specular" type="constant" value="0"/>
+            </bsdf>
+            <texture name="normal" type="image" filename="textures/MT_PM_V60_Acer_buergerianum_01_Trunk_01_normal.jpg" linear="true"/>
+            <transform>
+            <matrix value="0.4139,0,0,2,  0,0.4139,0,-1.5,  0,0,0.4139,0,  0,0,0,1"/>
+            </transform>
+        </instance>
+
+        <instance>
+            <shape type="mesh" filename="meshes/_m_1_Mesh.002.ply"/>
+            <bsdf type="principled">
+            <texture name="baseColor" type="image" filename="textures/MT_PM_V60_Acer_buergerianum_01_Petiole_01_albedo.jpg"/>
+            <texture name="roughness" type="constant" value="0"/>
+            <texture name="metallic" type="constant" value="0"/>
+            <texture name="specular" type="constant" value="0"/>
+            </bsdf>
+            <texture name="normal" type="image" filename="textures/MT_PM_V60_Acer_buergerianum_01_Petiole_01_normal.jpg" linear="true"/>
+            <transform>
+            <matrix value="0.4139,0,0,2,  0,0.4139,0,-1.5,  0,0,0.4139,0,  0,0,0,1"/>
+            </transform>
+        </instance>
+
+        <instance>
+            <shape type="mesh" filename="meshes/_m_2_Mesh.002.ply"/>
+            <emission type="lambertian">
+            <texture name="emission" type="constant" value="0"/>
+            </emission>
+            <transform>
+            <matrix value="0.4139,0,0,2,  0,0.4139,0,-1.5,  0,0,0.4139,0,  0,0,0,1"/>
+            </transform>
+        </instance>
+
+        <light type="envmap">
+            <texture type="constant" value="0.1,0.1,0.1"/>
+            <transform>
+            <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+            </transform>
+        </light>
+        
+    </scene>
+  </integrator>
+</test>

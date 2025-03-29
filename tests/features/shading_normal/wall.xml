@@ -1,0 +1,49 @@
+<test type="image" id="wall_normal2">
+  <integrator type="pathtracer" depth="10">
+    <sampler type="independent" count="64"/>
+    <scene id="scene">
+      <camera type="perspective">
+        <integer name="width" value="1280"/>
+        <integer name="height" value="720"/>
+        <float name="fov" value="39.598"/>
+        <string name="fovAxis" value="x"/>
+        <transform>
+          <matrix value="0.68592,0.32401,-0.65156,7.3589,  0.72768,-0.30542,0.61417,-6.9258,  -4.0113e-09,-0.8954,-0.44527,4.9583,  0,0,0,1"/>
+        </transform>
+      </camera>
+
+      <!-- <instance>
+        <shape type="sphere"/>
+        <transform>
+          <scale value="0.1"/>
+          <translate x="-0.30152" y="-1.3035" z="6.604"/>
+        </transform>
+        <emission type="lambertian">
+          <texture name="emission" type="constant" value="7599.1,7599.1,7599.1"/>
+        </emission>
+      </instance> -->
+      <light type="point" position="4, -2, 2.3" power="1000,1000,1000" />
+
+      <instance>
+      <shape type="mesh" filename="../meshes/Mesh_0.010.ply"/>
+      <bsdf type="principled">
+        <texture name="baseColor" type="image" filename="textures/Stone_wall_diffuse.jpg"/>
+        <texture name="roughness" type="constant" value="0.68182"/>
+        <texture name="metallic" type="constant" value="0"/>
+        <texture name="specular" type="constant" value="0"/>
+      </bsdf>      
+      <texture name="normal" type="image" filename="textures/Stone_wall_normal.jpg" linear="true"/>
+      <transform>
+        <matrix value="1,0,0,-1,  0,-4.3711e-08,1,-2,  0,-1,-4.3711e-08,0,  0,0,0,1"/>
+      </transform>
+    </instance>
+
+      <light type="envmap">
+        <texture type="constant" value="0.050876,0.050876,0.050876"/>
+        <transform>
+          <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+        </transform>
+      </light>
+    </scene>
+  </integrator>
+</test>

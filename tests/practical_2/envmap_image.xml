@@ -1,0 +1,27 @@
+<test type="image" id="envmap_image">
+    <integrator type="direct">
+        <scene id="scene">
+            <camera type="perspective" id="camera">
+                <integer name="width" value="512"/>
+                <integer name="height" value="512"/>
+
+                <string name="fovAxis" value="x"/>
+                <float name="fov" value="90"/>
+
+                <transform>
+                    <rotate axis="1,0,0" angle="-2.5"/>
+                    <translate z="-2"/>
+                </transform>
+            </camera>
+
+            <light type="envmap" weight="0">
+                <texture type="image" filename="../textures/kloofendal_overcast_1k.hdr" exposure="0.7"/>
+                <transform>
+                    <rotate axis="0,1,0" angle="-50"/>
+                </transform>
+            </light>
+
+        </scene>
+        <sampler type="independent" count="128"/>
+    </integrator>
+</test>

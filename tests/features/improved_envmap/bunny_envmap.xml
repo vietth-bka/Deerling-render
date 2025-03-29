@@ -1,0 +1,133 @@
+<scene id="scene">
+    <camera type="perspective" id="camera">
+        <integer name="width" value="1920" />
+        <integer name="height" value="1080" />
+
+        <string name="fovAxis" value="x" />
+        <float name="fov" value="30" />
+
+        <transform>
+            <rotate axis="1,0,0" angle="-2.5" />
+            <translate z="-5" />
+        </transform>
+    </camera>
+
+    <!-- <light type="area">
+        <instance>
+            <shape type="sphere" />
+            <emission type="lambertian">
+                <texture name="emission" type="constant" value="2,7,30" />
+            </emission>
+            <transform>
+                <scale value="1" />
+                <translate x="-2.5" y="-2" z="1" />
+            </transform>
+        </instance>
+    </light>
+
+    <light type="area">
+        <instance>
+            <shape type="sphere" />
+            <emission type="lambertian">
+                <texture name="emission" type="constant" value="20,5,1" />
+            </emission>
+            <transform>
+                <scale value="1" />
+                <translate x="2.5" y="-2" z="1" />
+            </transform>
+        </instance>
+    </light> -->
+
+    <!-- <instance>
+        <shape type="sphere" />
+        <emission type="lambertian">
+            <texture name="emission" type="constant" value="0.2,0.7,3" />
+        </emission>
+        <transform>
+            <scale value="2" />
+            <translate x="-2.5" y="-2" z="1" />
+        </transform>
+    </instance> -->
+
+    <light type="envmapIS" importanceSampling="true" weight="1.0">
+    <!-- <light type="envmap" weight="0.0f"> -->
+        <!-- <texture type="image" filename="../textures/kloofendal_overcast_1k.hdr" exposure="0.5"/>
+         -->
+        <!-- <texture type="image" filename="../scene/room/export_xml/textures/autumn-field-pure-sky_1K_fad97951-e7a2-47e2-8709-e1baa40aaad6.e.exr" exposure="1"/> -->
+        <texture type="image" filename="../../textures/autumn_field_1k.exr" exposure="0.5"/>
+        <transform>
+            <!-- <rotate axis="0,1,0" angle="200"/> -->
+            <rotate axis="0,1,0" angle="180"/>
+            <rotate axis="1,0,0" angle="0"/>
+            <!-- <rotate axis="0,0,1" angle="10"/> -->
+        </transform>
+        <!-- <transform>
+            <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+        </transform> -->
+    </light>    
+
+    <!-- <instance>
+        <shape type="mesh" filename="../../meshes/bunny.ply" />
+        <bsdf type="diffuse">
+            <texture name="albedo" type="constant" value="0.5" />
+        </bsdf> -->
+
+        <!-- <bsdf type="dielectric">
+            <texture name="ior" type="constant" value="1.5" />
+            <texture name="reflectance" type="constant" value="1,0.8,0.7" />
+            <texture name="transmittance" type="constant" value="0.7,0.8,1.0" />
+        </bsdf> -->
+        
+        <!-- <bsdf type="roughconductor">
+            <texture name="reflectance" type="constant" value="0.95,0.95,1"/>
+            <texture name="roughness" type="constant" value="0.3"/>
+        </bsdf> -->
+
+        <!-- <bsdf type="roughdielectric">
+            <texture name="ior" type="constant" value="1.5"/>
+            <texture name="reflectance" type="constant" value="1,0.8,0.7"/>
+            <texture name="transmittance" type="constant" value="0.7,0.8,1.0"/>
+            <texture name="roughness" type="constant" value="0.2"/>
+        </bsdf> -->
+
+        <!-- <transform>
+            <rotate axis="1,0,0" angle="90" />
+            <translate x="0.18" y="1.03" />
+            <translate x="0.18" y="2.06" />
+            <scale value="1"/>
+        </transform>
+    </instance> -->
+
+    <instance>
+        <shape type="rectangle" />
+        <bsdf type="diffuse">
+            <texture name="albedo" type="checkerboard" scale="32" color0="0.1" color1="0.9" value="0.01"/>
+            <!-- <texture name="albedo" type="constant" value="0.07,0.09,0.08" /> -->
+        </bsdf>
+        <transform>
+            <rotate axis="1,0,0" angle="90" />
+            <scale value="10" />
+            <translate y="1" />
+        </transform>
+    </instance>
+
+    <!-- <instance>
+        <shape type="mesh" filename="../../meshes/cube.ply"/>
+        <volume type="grid" filename="tests/volumes/cloud.vol" multiplier="46.5"/>            
+        <bsdf type="volume" absorption="6" scatter="0.9" phase="0.0"/>
+        <transform>
+            <scale x="405" y="94" z="403"/>
+            <scale value="0.00325"/>
+            <rotate axis="1,0,0" angle="-10"/>
+            <translate x="0" y="-0.5" z="4"/>
+        </transform>
+    </instance> -->
+</scene>
+
+<!-- <integrator type="direct"> -->
+<!-- <integrator type="pathtracer" depth="5"> -->
+<integrator type="mis" depth="5">
+    <ref id="scene" />
+    <image id="bunny_envIS_mis"/>
+    <sampler type="independent" count="64" />
+</integrator>
